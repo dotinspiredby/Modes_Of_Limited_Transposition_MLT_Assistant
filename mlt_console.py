@@ -35,7 +35,7 @@ def validate(lib, data_set):
             while resulted[0] != i:
                 resulted.insert(len(resulted), resulted[0])
                 resulted.remove(resulted[0])
-                yield 'transposition index %s:' % i, resulted
+            yield 'transposition index %s:' % i, resulted
 
 
 library = [[[i+0] for i in range(0, 12, 2)],
