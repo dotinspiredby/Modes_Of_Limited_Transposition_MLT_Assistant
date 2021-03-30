@@ -2,7 +2,7 @@
 
 Hello! This is .inspiredby and here I would like to represent my very first small program on Python3. 
 
-This is Modes Of Limited Transposition (MLT) Assistant, which helps to identify the notes from input in particular modes of limited transposition (O. Messiaen system) and their transposition examples. About Messiaen and his MLT system you can read here in the Chapter XVI: https://monoskop.org/images/5/50/Messiaen_Olivier_The_Technique_of_My_Musical_Language.pdf
+This is Modes Of Limited Transposition (MLT) Assistant, which helps to identify the notes from input in particular modes of limited transposition (O. Messiaen system) and their transposition examples. About O. Messiaen's MLT system you can read here in the Chapter XVI: https://monoskop.org/images/5/50/Messiaen_Olivier_The_Technique_of_My_Musical_Language.pdf
 
 The tool will help with the harmony analysis for musical material (mostly from the 20th century) in terms of mode identification and makes the process of music theory learning easier and faster. 
 
