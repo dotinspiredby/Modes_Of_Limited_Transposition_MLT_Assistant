@@ -1,6 +1,6 @@
 # Modes_Of_Limited_Transposition_MLT_Assistant
 
-Hello! This is .inspiredby and here I would like to represent my very first small program. 
+Hello! This is .inspiredby and here I would like to represent my very first small program on Python3. 
 
 This is Modes Of Limited Transposition (MLT) Assistant, which helps to identify the notes from input in particular modes of limited transposition (O. Messiaen system) and their transposition examples. About Messiaen and his MLT system you can read here in the Chapter XVI: https://monoskop.org/images/5/50/Messiaen_Olivier_The_Technique_of_My_Musical_Language.pdf
 
