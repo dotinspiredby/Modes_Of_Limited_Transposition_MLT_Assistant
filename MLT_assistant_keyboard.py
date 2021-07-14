@@ -1,6 +1,6 @@
 from mode_constructor import library
 from process import *
-from for_notation import pre_xmlexport
+from for_notation import exctract_to_str
 from music21 import converter, metadata
 import tkinter as tk
 from tkinter import *
@@ -118,7 +118,7 @@ def xml_export(row_data):
     notation = "tinyNotation: "
     for m in range(len(row_data)):
         if len(row_data[m]) > 0:
-            notation += ''.join(*pre_xmlexport(row_data[m], (m + 1)))
+            notation += str(*exctract_to_str(row_data[m], None, m + 1))
     return notation
 
 
