@@ -19,22 +19,28 @@ def notate_instr2(integerslist, index, modeid):
     yield parameters
 
 
-def xml_gather2(lofl, modeid):
-    for i in range(len(lofl)):
-        instr = ''.join(notate_instr2(lofl[i][1], index=lofl[i][0][-2], modeid=modeid))
-        yield instr
-
-
-def pre_xmlexport(mode, modeid):
-    i = ''.join(xml_gather2(lofl=mode, modeid=modeid))
-    yield i
+def exctract_to_str(list_int, index, mode_id):
+    indx = index
+    list2 = []
+    end_of_unpacking = False
+    for i in list_int:
+        if isinstance(i, int):
+            end_of_unpacking = True
+        elif isinstance(i, tuple):
+            index_info, row = i
+            indx = index_info[-2]
+            list2 = row
+    if end_of_unpacking:
+        return notate_instr2(list_int, indx, mode_id)
+    else:
+        return exctract_to_str(list2, indx, mode_id)
 
 
 def xml_export(row_data):
     notation = 'tinyNotation: '
     for m in range(len(row_data)):
         if len(row_data[m]) > 0:
-            notation += ''.join(*pre_xmlexport(row_data[m], (m + 1)))
+            notation += str(*exctract_to_str(row_data[m], None, m + 1))
 
     if input('\n''Would you like your printed XML copy (yes/no)?') == 'yes':
         s = converter.parse(notation)
