@@ -115,10 +115,11 @@ def total_check():
 
 def xml_export(row_data):
     global notation
-    notation = "tinyNotation: "
+    notatn = []
     for m in range(len(row_data)):
         if len(row_data[m]) > 0:
-            notation += str(*exctract_to_str(row_data[m], None, m + 1))
+            notatn.append(str(exctract_to_str(row_data[m], (m + 1))))
+    notation = "tinyNotation: " + ' '.join(notatn)
     return notation
 
 
